@@ -1,12 +1,5 @@
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
 
-<div class="flex mx-5 my-5 text-center">
-  <div class="flex items-center mr-4">
-    <input [(ngModel)]="inputType" id="inline-radio" type="radio" value="file" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    <label for="inline-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">File</label>
-  </div>
-</div>
-
 <div class="max-w-2xl mt-5 mx-5">
   <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">Upload file</label>
   <input (change)="onFileSelected($event)" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">

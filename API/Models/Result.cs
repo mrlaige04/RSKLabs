@@ -7,4 +7,5 @@ public class Result
     public string[] Sets { get; set; }
     public IList<GroupIteration> GroupIterations { get; set; }
     public IEnumerable<Group> ClarifiedGroups { get; set; }
+    public IEnumerable<MyGroup> Clarified { get; set; }
 }

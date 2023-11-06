@@ -59,17 +59,22 @@
                 var coords = similarItems.Select(si => new Coord(si.row + 1, si.column + 1)).ToList();
                 GroupIterations.Add(new GroupIteration(ConvertToJaggedArray(SimilarityMatrix), group, maxItem, coords));
             }
+
+            GroupIterations = GroupIterations.DistinctBy(x => x.Group).ToList();
         }
+
         public Result GetResult()
         {
             var matrix = CalculateSimilarityMatrix();
             var jagged = ConvertToJaggedArray(matrix);
+            var clarified = ClarifyGroups();
             return new Result()
             {
                 Sets = Sets,
                 UniqueOperations = UniqueOperation,
                 SimilarityMatrix = jagged,
                 GroupIterations = GroupIterations,
+                Clarified = clarified
             };
         }
 
@@ -77,7 +82,7 @@
         {
             return sets
                 .SelectMany(line => line.Replace("\r", " ").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
-                .Select(x => x.ToLowerInvariant())
+                .Select(x => x.ToUpperInvariant())
                 .Distinct()
                 .ToArray();
         }
@@ -104,6 +109,71 @@
             }
 
             return similarItems;
+        }
+
+        private IEnumerable<MyGroup> ClarifyGroups()
+        {
+            var mainSets = GetSets();
+            var groups = GroupIterations.Select(gi =>
+            {
+                var sets = new List<Set>();
+                
+                foreach (var set in gi.Group)
+                {
+                    sets.Add(mainSets[set-1]);
+                }
+                return new MyGroup() { Sets = sets };
+            }).OrderByDescending(g=>g.Operations.Count()).ToList();
+
+            
+            for (var i = 0; i < groups.Count - 1; i++)
+            {
+                for (var j = i + 1; j < groups.Count; j++)
+                {
+                    if (IsGroupAbsorbsGroup(groups[i], groups[j]))
+                    {
+                        var mainGroupSets = groups[i].Sets.ToList();
+                        mainGroupSets.AddRange(groups[j].Sets);
+
+                        groups[i].Sets = mainGroupSets;
+                        groups.Remove(groups[j]);
+                        j--;
+                    } else
+                    {
+                        foreach (var set in groups[j].Sets)
+                        {
+                            if (IsGroupsAbsorbsSet(groups[i], set))
+                            {
+                                var mainGroupsSets = groups[i].Sets.ToList();
+                                mainGroupsSets.Add(set);
+                                groups[i].Sets = mainGroupsSets;
+
+                                var otherGroupSets = groups[j].Sets.ToList();
+                                otherGroupSets.Remove(set);
+                                groups[j].Sets = otherGroupSets;
+                            }
+                        }
+                    }
+                }
+            }
+
+            groups.ForEach(g =>
+            {
+                g.Sets = g.Sets.OrderBy(s => s.Code);
+            });
+          
+            return groups.OrderByDescending(g=>g.Operations.Count());
+        }
+
+        private static bool IsGroupAbsorbsGroup(MyGroup main, MyGroup other)
+        {
+            
+            return other.Operations.All(op=>main.Operations.Contains(op));
+        }
+
+        private static bool IsGroupsAbsorbsSet(MyGroup group, Set set)
+        {
+            return set.Operations.All(op=>group.Operations.Contains(op));
         }
 
         private (int, int) GetMaxElementIndexInLowerTriangle(int[,] matrix)

@@ -10,7 +10,7 @@ public class HomeController : Controller
     {
         using var sr = new StreamReader(file.OpenReadStream());
         var content = await sr.ReadToEndAsync();
-        var lines = content.Split("\r\n", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        var lines = content.Replace("\r\n", "\n").Split("\n", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
         var solution = new Solution(lines);
         solution.CalculateTechGroups();

@@ -51,10 +51,17 @@
     Group: {{group.group.join(', ')}}
   </p>
 
-  <hr class="mt-4">
+  <!--<hr class="mt-4">
   Clarified groups:
   <div *ngFor="let clGroup of result!.clarifiedGroups; let i = index;">
       <p>{{i+1}}. {{ '{' }} {{getCodesFromSets(clGroup.sets)}} {{ '}' }}. Operations: {{clGroup.operations.join(', ')}}</p>
+  </div>
+-->
+
+  <hr class="mt-4">
+  Clarified groups:
+  <div *ngFor="let clGroup of result!.clarified; let i = index;">
+    <p>{{i+1}}. {{ '{' }} {{getCodesFromSets(clGroup.sets)}} {{ '}' }}. Operations: {{clGroup.operations.join(', ')}}</p>
   </div>
 </div>
 
