@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ResultComponent } from './result/result.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ForceDirectedGraphComponent } from './force-directed-graph/force-directed-graph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResultComponent
+    ResultComponent,
+    ForceDirectedGraphComponent
   ],
   imports: [
     BrowserModule,

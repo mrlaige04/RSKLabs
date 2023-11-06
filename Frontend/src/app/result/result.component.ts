@@ -1,21 +1,27 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {ApiResult} from "../ApiResult";
 import {Coord} from "./Coord";
-import {
-  logBuilderStatusWarnings
-} from "@angular-devkit/build-angular/src/builders/browser-esbuild/builder-status-warnings";
+import * as d3 from 'd3'
 import {ISet} from "./Set";
+import {Data} from "../force-directed-graph/force-directed-graph.component";
+
 
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.scss']
 })
-export class ResultComponent implements OnInit{
+export class ResultComponent implements OnInit, AfterViewInit{
   @Input() result : ApiResult | undefined;
+
+  @ViewChild('test') test!: ElementRef;
 
   currentIndex = 0;
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
 
   }
 
