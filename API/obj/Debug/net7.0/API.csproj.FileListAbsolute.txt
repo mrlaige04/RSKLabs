@@ -1,0 +1,67 @@
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\appsettings.Development.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\appsettings.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\API.exe
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\API.deps.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\API.runtimeconfig.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\API.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\API.pdb
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets.build.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets.development.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\staticwebassets.pack.json
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.csproj.CopyComplete
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\refint\API.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.pdb
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\appsettings.json
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\API.exe
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\API.deps.json
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\API.runtimeconfig.json
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\API.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\API.pdb
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\USER\Source\Repos\RSK\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.csproj.CopyComplete
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.dll
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.pdb
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+C:\Users\USER\Source\Repos\RSK\API\obj\Debug\net7.0\ref\API.dll
+D:\KPI\3 курс 1 семестр\РСК\Practicums\Practicums\API\obj\Debug\net7.0\API.sourcelink.json
