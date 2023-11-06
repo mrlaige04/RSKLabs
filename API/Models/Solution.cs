@@ -68,14 +68,55 @@
             var matrix = CalculateSimilarityMatrix();
             var jagged = ConvertToJaggedArray(matrix);
             var clarified = ClarifyGroups();
+            List<GraphData> graphsDatas = GetGraphDatas(clarified);
+
             return new Result()
             {
                 Sets = Sets,
                 UniqueOperations = UniqueOperation,
                 SimilarityMatrix = jagged,
                 GroupIterations = GroupIterations,
-                Clarified = clarified
+                Clarified = clarified,
+                GraphDatas = graphsDatas
             };
+        }
+
+        private List<GraphData> GetGraphDatas(IEnumerable<MyGroup> clarifyGroup)
+        {
+            if (clarifyGroup == null)
+            {
+                throw new ArgumentNullException(nameof(clarifyGroup));
+            }
+
+            List<GraphData> graphDatas = new List<GraphData>();
+
+            for (int j = 0; j < clarifyGroup.Count(); j++)
+            {
+                List<GraphLink> graphLinks = new List<GraphLink>();
+
+                foreach (var set in clarifyGroup.ElementAt(j).Sets)
+                {
+                    for (int i = 0; i < set.Operations.Count() - 1; i++)
+                    {
+                        if (!graphLinks.Any(x => x.Target == set.Operations.ElementAt(i + 1) && x.Source == set.Operations.ElementAt(i)))
+                        {
+                            graphLinks.Add(new GraphLink() { Source = set.Operations.ElementAt(i), Target = set.Operations.ElementAt(i + 1) });
+                        }
+                    }
+                }
+
+                List<GraphNode> graphNodes = clarifyGroup.ElementAt(j).Operations.Select(x => new GraphNode() { Id = x, Label = x }).ToList();
+                GraphData graphData = new GraphData()
+                {
+                    Nodes = graphNodes,
+                    Links = graphLinks,
+                    GroupNumber = j
+                };
+
+                graphDatas.Add(graphData);
+            }
+
+            return graphDatas;
         }
 
         private string[] ExtractUniqueOperations(string[] sets)
@@ -117,15 +158,15 @@
             var groups = GroupIterations.Select(gi =>
             {
                 var sets = new List<Set>();
-                
+
                 foreach (var set in gi.Group)
                 {
-                    sets.Add(mainSets[set-1]);
+                    sets.Add(mainSets[set - 1]);
                 }
                 return new MyGroup() { Sets = sets };
-            }).OrderByDescending(g=>g.Operations.Count()).ToList();
+            }).OrderByDescending(g => g.Operations.Count()).ToList();
 
-            
+
             for (var i = 0; i < groups.Count - 1; i++)
             {
                 for (var j = i + 1; j < groups.Count; j++)
@@ -138,7 +179,8 @@
                         groups[i].Sets = mainGroupSets;
                         groups.Remove(groups[j]);
                         j--;
-                    } else
+                    }
+                    else
                     {
                         foreach (var set in groups[j].Sets)
                         {
@@ -161,19 +203,19 @@
             {
                 g.Sets = g.Sets.OrderBy(s => s.Code);
             });
-          
-            return groups.OrderByDescending(g=>g.Operations.Count());
+
+            return groups.OrderByDescending(g => g.Operations.Count());
         }
 
         private static bool IsGroupAbsorbsGroup(MyGroup main, MyGroup other)
         {
-            
-            return other.Operations.All(op=>main.Operations.Contains(op));
+
+            return other.Operations.All(op => main.Operations.Contains(op));
         }
 
         private static bool IsGroupsAbsorbsSet(MyGroup group, Set set)
         {
-            return set.Operations.All(op=>group.Operations.Contains(op));
+            return set.Operations.All(op => group.Operations.Contains(op));
         }
 
         private (int, int) GetMaxElementIndexInLowerTriangle(int[,] matrix)

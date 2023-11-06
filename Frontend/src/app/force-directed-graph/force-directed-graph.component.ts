@@ -8,9 +8,11 @@ import { SimulationNodeDatum} from "d3";
   styleUrls: ['./force-directed-graph.component.scss']
 })
 export class ForceDirectedGraphComponent implements AfterViewInit {
-  @Input() data!: Data;
+  @Input() data!: Graph;
   @ViewChild("container") container!: ElementRef;
 
+  constructor() {
+  }
   ngAfterViewInit() {
     const width = 600;
     const height = 400;
@@ -24,7 +26,7 @@ export class ForceDirectedGraphComponent implements AfterViewInit {
       .force('link', d3.forceLink(this.data.links).id((d: any) => d.id).distance(60))
       .force('charge', d3.forceManyBody().strength(-200))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide(40));
+      .force('collision', d3.forceCollide(70));
 
     const marker = svg.append('defs')
       .selectAll('marker')
@@ -77,7 +79,8 @@ export class ForceDirectedGraphComponent implements AfterViewInit {
   }
 }
 
-export interface Data {
+export interface Graph {
+  groupNumber: number;
   nodes: Array<GraphNode>;
   links: Array<GraphLink>;
 }

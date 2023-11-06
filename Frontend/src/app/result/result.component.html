@@ -66,6 +66,12 @@
 
   <hr class="mt-5">
   Graphs:
+
+
+  <div *ngFor="let graph of result!.graphDatas">
+    Graph for group {{graph.groupNumber+1}}
+    <app-force-directed-graph [data]="graph"></app-force-directed-graph>
+  </div>
   <div class=""></div>
 
 
@@ -73,6 +79,3 @@
   Modules:
   <div class=""></div>
 </div>
-
-
-<app-force-directed-graph ></app-force-directed-graph>

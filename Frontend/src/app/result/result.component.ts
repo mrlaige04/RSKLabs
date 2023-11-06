@@ -1,9 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {ApiResult} from "../ApiResult";
 import {Coord} from "./Coord";
-import * as d3 from 'd3'
 import {ISet} from "./Set";
-import {Data} from "../force-directed-graph/force-directed-graph.component";
 
 
 @Component({
