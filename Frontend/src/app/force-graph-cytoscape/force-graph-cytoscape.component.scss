@@ -1,0 +1,13 @@
+#cyContainer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+* {
+  border: 1px solid black;
+}
+
+.force-graph-container {
+  max-width: min-content;
+}

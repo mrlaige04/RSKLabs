@@ -1,4 +1,6 @@
-﻿namespace API.Models
+﻿using System.Text.Json;
+
+namespace API.Models
 {
     public class Solution
     {

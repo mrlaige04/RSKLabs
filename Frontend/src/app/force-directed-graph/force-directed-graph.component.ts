@@ -15,7 +15,7 @@ export class ForceDirectedGraphComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     const width = 600;
-    const height = 400;
+    const height = 600;
 
     const svg = d3.select(this.container.nativeElement)
       .append('svg')

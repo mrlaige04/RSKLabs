@@ -70,7 +70,8 @@
 
   <div *ngFor="let graph of result!.graphDatas">
     Graph for group {{graph.groupNumber+1}}
-    <app-force-directed-graph [data]="graph"></app-force-directed-graph>
+    <!--<app-force-directed-graph [data]="graph"></app-force-directed-graph>-->
+    <app-force-graph-cytoscape [graph]="graph"></app-force-graph-cytoscape>
   </div>
   <div class=""></div>
 
